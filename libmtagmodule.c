@@ -8,13 +8,13 @@ static PyObject *MTagError;
 typedef struct {
 	PyObject_HEAD;
 	PyObject *tag;
-	MTag_File *c_file;
+	mtag_file_t *c_file;
 } File;
 
 typedef struct {
 	PyObject_HEAD;
 	PyObject *file;
-	MTag_Tag *c_tag;
+	mtag_tag_t *c_tag;
 } Tag;
 
 static PyTypeObject FileType = {
