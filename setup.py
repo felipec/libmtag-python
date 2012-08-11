@@ -8,9 +8,9 @@ def pkgconfig(*packages, **kw):
         kw.setdefault(flag_map.get(token[:2]), []).append(token[2:])
     return kw
 
-module1 = Extension('libmtag', ['libmtagmodule.c'], **pkgconfig('libmtag'))
+module1 = Extension('libmtag', libraries = ['mtag'], sources= ['libmtagmodule.c'])
 
 setup (name = 'MTag',
        version = '0.0.0',
-       description = 'This is a demo package',
+       description = 'The python-mtag package',
        ext_modules = [module1])
