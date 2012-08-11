@@ -1,7 +1,7 @@
 #include <Python.h>
 #include "structmember.h"
 
-#include <mtag.h>
+#include <libmtag/mtag.h>
 
 static PyObject *MTagError;
 
